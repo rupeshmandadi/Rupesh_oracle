@@ -18,6 +18,7 @@ v_user_id number(10) :=NULL;
 v_user_name VARCHAR2(100) := i_user_name;
 begin  
 --rupesh
+-- this is new change
 if i_user_name is null then
 v_user_name := i_first_name||'.'||i_last_name ;
 end if;
