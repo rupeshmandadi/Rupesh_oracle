@@ -8,7 +8,9 @@ set define off;
 
   CREATE OR REPLACE PROCEDURE "IPMAPPDB"."CREATE_CONTRACTOR_USER" (i_user_name varchar2 default null,i_first_name in varchar2,i_last_name in varchar2,i_email_addr varchar2,i_role_cd in varchar2) is
 v_user_cnt number(2);
-v_cnt number(1);
+v_cnt NUMBER(1);
+
+
   v_object  VARCHAR2 (200)  := 'create_internal_user';
   v_status  VARCHAR2 (500) := NULL;
   v_sqlcode VARCHAR2 (100)  := NULL;
@@ -18,7 +20,6 @@ v_user_id number(10) :=NULL;
 v_user_name VARCHAR2(100) := i_user_name;
 begin  
 --rupesh
--- this is new change
 if i_user_name is null then
 v_user_name := i_first_name||'.'||i_last_name ;
 end if;
