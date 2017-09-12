@@ -1,0 +1,1 @@
+select * /*insert*/ from left_menu_ref
